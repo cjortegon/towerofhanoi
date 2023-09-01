@@ -60,6 +60,7 @@ class _TowersOfHanoiGameViewState extends State<TowersOfHanoiGameView> {
       return;
     }
     Movement nextMove = movements.removeAt(0);
+    print("Take disk ${nextMove.disk} from rod ${nextMove.source} to rod ${nextMove.target}");
     moveDisk(nextMove.source, nextMove.target);
 
     Future.delayed(Duration(milliseconds: widget.speed), () {
